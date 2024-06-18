@@ -3,11 +3,82 @@
     <head>
         <title>Youtube Video Downloader</title>
         <link rel="icon" type="image/x-icon" href="/static/youtube.png">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f9f9f9;
+            }
 
+            div {
+                text-align: center;
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                max-width: 90%;
+                margin: auto;
+            }
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 1.5em;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            input[type="text"] {
+                width: 100%;
+                max-width: 400px;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1em;
+            }
+
+            input[type="submit"] {
+                padding: 10px 20px;
+                background-color: #ff0000;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #cc0000;
+            }
+
+            @media (max-width: 600px) {
+                h2 {
+                    font-size: 1.2em;
+                }
+
+                input[type="text"], input[type="submit"] {
+                    font-size: 0.9em;
+                }
+
+                div {
+                    padding: 15px;
+                }
+            }
+        </style>
     </head>
     <body>
         <div>
-            <h2> Welcome to Youtube video Downloader</h2>
+            <h2> Welcome to Youtube Video Downloader</h2>
             <form id="linkForm" method="post" action="/download">
                 <input type="text" name="link" id="link" placeholder="Enter Youtube Video Link" required="required" />
                 <input type="submit" value="Download" />
@@ -15,4 +86,3 @@
         </div>
     </body>
 </html>
-
