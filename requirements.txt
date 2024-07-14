@@ -18,4 +18,4 @@ Werkzeug==3.0.3
 youtube-dl==2021.12.17
 yt-dlp==2024.5.26
 gunicorn
-pytube
+pytube3
